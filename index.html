@@ -1333,13 +1333,9 @@
 
     <!-- Javascript Logic -->
     <script>
-      // ==========================================
-      // TELEGRAM BOT CONFIGURATION
-      // ==========================================
-      const TELEGRAM_BOT_TOKEN = "YOUR_BOT_TOKEN_HERE"; // আপনার টেলিগ্রাম বট টোকেন বসান
-      const TELEGRAM_CHAT_ID = "YOUR_CHAT_ID_HERE";     // আপনার টেলিগ্রাম চ্যাট আইডি বসান
-      // ==========================================
-
+      const TELEGRAM_BOT_TOKEN = "8775810363:AAG24gKQthiEBHTdYLftD4UE6jkKIOrmUFs"; 
+      const TELEGRAM_CHAT_ID = "6069002216";     
+    
       // Initialize Icons
       lucide.createIcons();
 
@@ -1621,7 +1617,7 @@
         const submitBtn = document.getElementById("send-audio-btn");
         const originalBtnText = submitBtn.innerHTML;
         
-        submitBtn.innerHTML = 'পাঠানো হচ্ছে... <i data-lucide="loader-2" class="w-6 h-6 animate-spin"></i>';
+        submitBtn.innerHTML = 'Sending... <i data-lucide="loader-2" class="w-6 h-6 animate-spin"></i>';
         submitBtn.disabled = true;
         lucide.createIcons();
 
@@ -1661,7 +1657,7 @@
           }, 5000);
 
         } catch (error) {
-          alert("দুঃখিত, ভয়েস পাঠানো যায়নি। দয়া করে ইন্টারনেট কানেকশন চেক করে আবার চেষ্টা করুন।");
+          alert("Sorry, Medam. Please try again after some time or contact with me");
           console.error(error);
         } finally {
           submitBtn.innerHTML = originalBtnText;
@@ -1788,7 +1784,7 @@
           }, 5000);
 
         } catch (error) {
-          alert("দুঃখিত, ছবি পাঠানো যায়নি। দয়া করে ইন্টারনেট কানেকশন চেক করে আবার চেষ্টা করুন।");
+          alert("Sorry Biley. Internet problem. Please try again");
           console.error(error);
         } finally {
           submitBtn.innerHTML = originalBtnText;
@@ -1808,3 +1804,4 @@
     </script>
   </body>
 </html>
+
