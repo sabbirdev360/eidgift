@@ -1220,7 +1220,7 @@
             <p
               class="text-cyan-100/80 text-lg sm:text-xl font-light max-w-xl mx-auto"
             >
-              ঈদের দিনের সবচেয়ে সুন্দর স্মৃতিগুলো ফ্রেমবন্দী করে পাঠিয়ে দাও। (একাধিক ছবি দেয়া যাবে)
+              ঈদের দিনের সবচেয়ে সুন্দর স্মৃতিগুলো ফ্রেমবন্দী করে পাঠিয়ে দাও। অনেকগুলো ছবি দিবা কিন্তু🥰
             </p>
           </div>
 
@@ -1274,14 +1274,14 @@
                 </div>
                 
                 <button type="button" id="add-more-photos-btn" onclick="document.getElementById('photo-upload').click()" class="hidden mt-3 w-full text-xs font-bold text-cyan-600 border border-cyan-400/50 py-2 rounded flex items-center justify-center gap-1 hover:bg-cyan-50">
-                   <i data-lucide="plus" class="w-4 h-4"></i> আরো ছবি যুক্ত করুন
+                   <i data-lucide="plus" class="w-4 h-4"></i> আরো ছবি যুক্ত করতে পারো না😒
                 </button>
 
                 <div class="mt-6 px-2 relative z-20">
                   <input
                     type="text"
                     id="photo-caption"
-                    placeholder="ছবির ক্যাপশন লিখুন..."
+                    placeholder="কিছু বলেন..."
                     class="w-full bg-transparent border-b border-slate-300 text-slate-800 text-center focus:outline-none focus:border-cyan-500 font-semibold placeholder:text-slate-400 py-2 text-xl italic transition-colors font-bengali"
                     required
                   />
@@ -1293,7 +1293,7 @@
               type="submit"
               class="w-full max-w-sm bg-gradient-to-r from-cyan-500 via-blue-500 to-cyan-500 background-animate hover:bg-gradient-to-br text-white py-4 rounded-2xl font-bold transition-all flex items-center justify-center gap-3 shadow-[0_10px_20px_rgba(6,182,212,0.3)] hover:shadow-[0_15px_30px_rgba(6,182,212,0.5)] hover:-translate-y-1 text-xl"
             >
-              ছবি পাঠিয়ে দাও <i data-lucide="send" class="w-6 h-6"></i>
+              Send me😍 <i data-lucide="send" class="w-6 h-6"></i>
             </button>
 
             <div
@@ -1305,7 +1305,7 @@
               >
                 <i data-lucide="check" class="w-6 h-6"></i>
               </div>
-              <span>ছবিগুলো সফলভাবে পাঠানো হয়েছে!</span>
+              <span>Thnak you Medam ji🥰 Pic dewar jonno😍</span>
             </div>
           </form>
         </div>
@@ -1467,12 +1467,12 @@
         const submitBtn = document.querySelector('#eidi-form button[type="submit"]');
         const originalBtnText = submitBtn.innerHTML;
         
-        submitBtn.innerHTML = 'পাঠানো হচ্ছে... <i data-lucide="loader-2" class="w-7 h-7 animate-spin"></i>';
+        submitBtn.innerHTML = 'Sending... <i data-lucide="loader-2" class="w-7 h-7 animate-spin"></i>';
         submitBtn.disabled = true;
         lucide.createIcons();
 
         try {
-          const message = `🎁 *New Eidi Request!*\n\n📝 *Message:* ${giftItem}\n💰 *Amount:* ${giftAmount}`;
+          const message = `🎁 *New Salami Request!*\n\n📝 *Message:* ${giftItem}\n💰 *Amount:* ${giftAmount}`;
           
           const response = await fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`, {
               method: 'POST',
@@ -1494,7 +1494,7 @@
           }, 5000);
 
         } catch (error) {
-          alert("দুঃখিত, মেসেজ পাঠানো যায়নি। দয়া করে ইন্টারনেট কানেকশন চেক করে আবার চেষ্টা করুন।");
+          alert("Sorry, Try again or Contact with me");
           console.error(error);
         } finally {
           submitBtn.innerHTML = originalBtnText;
@@ -1722,7 +1722,7 @@
       async function handlePhotoSubmit(e) {
         e.preventDefault();
         if (photoFiles.length === 0) {
-          alert("দয়া করে অন্তত একটি ছবি নির্বাচন করো!");
+          alert("Kutta, Soytan. Tor kicu lagbe na ja. Akta pic o dis ni");
           return;
         }
 
@@ -1731,7 +1731,7 @@
         const submitBtn = document.querySelector('#photo-form button[type="submit"]');
         const originalBtnText = submitBtn.innerHTML;
 
-        submitBtn.innerHTML = 'পাঠানো হচ্ছে... <i data-lucide="loader-2" class="w-6 h-6 animate-spin"></i>';
+        submitBtn.innerHTML = 'Sending... <i data-lucide="loader-2" class="w-6 h-6 animate-spin"></i>';
         submitBtn.disabled = true;
         lucide.createIcons();
 
@@ -1804,4 +1804,3 @@
     </script>
   </body>
 </html>
-
